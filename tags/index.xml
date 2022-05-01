@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on saymonaraujo.me</title>
+    <link>https://saymonaraujo.me/tags/</link>
+    <description>Recent content in Tags on saymonaraujo.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 18 Dec 2017 08:11:26 -0300</lastBuildDate><atom:link href="https://saymonaraujo.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mikrotik</title>
+      <link>https://saymonaraujo.me/tags/mikrotik/</link>
+      <pubDate>Mon, 18 Dec 2017 08:11:26 -0300</pubDate>
+      
+      <guid>https://saymonaraujo.me/tags/mikrotik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thedude</title>
+      <link>https://saymonaraujo.me/tags/thedude/</link>
+      <pubDate>Mon, 18 Dec 2017 08:11:26 -0300</pubDate>
+      
+      <guid>https://saymonaraujo.me/tags/thedude/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azure</title>
+      <link>https://saymonaraujo.me/tags/azure/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>https://saymonaraujo.me/tags/cloud/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graylog</title>
+      <link>https://saymonaraujo.me/tags/graylog/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/tags/graylog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microsoft</title>
+      <link>https://saymonaraujo.me/tags/microsoft/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NOC</title>
+      <link>https://saymonaraujo.me/tags/noc/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/tags/noc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>syslog</title>
+      <link>https://saymonaraujo.me/tags/syslog/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/tags/syslog/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

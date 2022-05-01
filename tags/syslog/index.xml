@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>syslog on saymonaraujo.me</title>
+    <link>https://saymonaraujo.me/tags/syslog/</link>
+    <description>Recent content in syslog on saymonaraujo.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 16 Dec 2017 09:51:51 -0400</lastBuildDate><atom:link href="https://saymonaraujo.me/tags/syslog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graylog - Entendendo a necessidade em um ambiente de redes</title>
+      <link>https://saymonaraujo.me/post/graylog_01/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/post/graylog_01/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

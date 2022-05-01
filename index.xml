@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>saymonaraujo.me</title>
+    <link>https://saymonaraujo.me/</link>
+    <description>Recent content on saymonaraujo.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 18 Dec 2017 08:11:26 -0300</lastBuildDate><atom:link href="https://saymonaraujo.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Dude em RouterOS CHR</title>
+      <link>https://saymonaraujo.me/tutorial/thedude_01/</link>
+      <pubDate>Mon, 18 Dec 2017 08:11:26 -0300</pubDate>
+      
+      <guid>https://saymonaraujo.me/tutorial/thedude_01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graylog - Entendendo a necessidade em um ambiente de redes</title>
+      <link>https://saymonaraujo.me/post/graylog_01/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/post/graylog_01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft Azure para estudantes</title>
+      <link>https://saymonaraujo.me/post/azure_01/</link>
+      <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
+      
+      <guid>https://saymonaraujo.me/post/azure_01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sobre</title>
+      <link>https://saymonaraujo.me/about/</link>
+      <pubDate>Thu, 16 Nov 2017 08:03:10 -0300</pubDate>
+      
+      <guid>https://saymonaraujo.me/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://saymonaraujo.me/fr/frcategories/</loc>
+  </url><url>
+    <loc>https://saymonaraujo.me/fr/frseries/</loc>
+  </url><url>
+    <loc>https://saymonaraujo.me/fr/frtags/</loc>
+  </url><url>
+    <loc>https://saymonaraujo.me/fr/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://saymonaraujo.me/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="https://saymonaraujo.me/fa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://saymonaraujo.me/fr/"
+                />
+  </url>
+</urlset>

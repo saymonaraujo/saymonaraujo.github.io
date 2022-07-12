@@ -1,184 +1,560 @@
 <!DOCTYPE html>
-<html lang="en">
-<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="Instalando o The Dude em um RouterOS CHR em VMWare ESXi">
-    <meta property="og:title" content="The Dude em RouterOS CHR">
-    
-    <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2017-12-18">
-    
-    <meta property="og:description" content="Instalando o The Dude em um RouterOS CHR em VMWare ESXi">
-    <meta property="og:url" content="https://saymonaraujo.me/tutorial/thedude_01/">
-    <meta property="og:site_name" content="saymonaraujo.me">
-    
-    <meta property="og:tags" content="thedude">
-    
-    <meta property="og:tags" content="mikrotik">
-    
-    <meta name="generator" content="Hugo 0.90.1" />
-    <title>The Dude em RouterOS CHR &middot; saymonaraujo.me</title>
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
-    
-    <link rel="stylesheet" href="https://saymonaraujo.me/css/style.css">
-    
-    <link href="https://saymonaraujo.me/index.xml" rel="alternate" type="application/rss+xml" title="saymonaraujo.me" />
-    
-    
-    <link rel="icon" href="https://saymonaraujo.me/favicon.ico" />
-    
+<html lang="en" dir="auto">
 
-    
-    
-</head>
-<body>
-
-<nav class="navbar navbar-default navbar-fixed-top visible-xs">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			
-				<a class="navbar-brand" href="https://saymonaraujo.me/">Saymon Araujo</a>
-			
-		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				
-				
-					<li><a href="https://saymonaraujo.me/about">Sobre</a></li>
-				
-					<li><a href="https://saymonaraujo.me/post/">Post</a></li>
-				
-					<li><a href="https://saymonaraujo.me/tutorial/">Tutorials</a></li>
-				
-			</ul>
-		</div>
-	</div>
-</nav>
-<div class="container-fluid">
-	<div class="row">
-		<div id="menu" class="hidden-xs col-sm-4 col-md-3">
-	<div id="menu-content" class="vertical-align">
-		
-			<h1 class="text-center"><a href="https://saymonaraujo.me/">Saymon Araujo</a></h1>
-		
-		
-		
-			<small class="text-center center-block">Operador de NOC/Full Stack Developer</small>
-		
-		
-		
-		<div id="social" class="text-center">
-			
-				<a href="https://github.com/saymonaraujo"><i class="fa fa-github fa-2x"></i></a>
-			
-				<a href="https://twitter.com/saymonaraujome"><i class="fa fa-twitter fa-2x"></i></a>
-			
-				<a href="https://br.linkedin.com/in/saymonaraujo"><i class="fa fa-linkedin fa-2x"></i></a>
-			
-				<a href=""><i class="fa fa- fa-2x"></i></a>
-			
-
-			<a href="mailto:contato@saymonaraujo.me"><i class="fa fa-envelope-o fa-2x"></i></a>
-		</div>
-		<div id="links" class="text-center">
-			
-			
-				<a href="https://saymonaraujo.me/about">Sobre</a>
-			
-				<a href="https://saymonaraujo.me/post/">Post</a>
-			
-				<a href="https://saymonaraujo.me/tutorial/">Tutorials</a>
-			
-		</div>
-	</div>
-</div>
-
-		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
-			<div class="row">
-				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
-
-<main>
-	<header>
-		<h1>The Dude em RouterOS CHR</h1>
-	</header>
-
-	<article>
-		<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-
-	</article>
-</main>
-
-<div id="bottom-nav" class="text-center center-block">
-	<a href=" https://saymonaraujo.me/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
-</div>
-
-
-  <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Dude em RouterOS CHR | saymonaraujo.me</title>
+<meta name="keywords" content="thedude, mikrotik">
+<meta name="description" content="Instalando o The Dude em um RouterOS CHR em VMWare ESXi">
+<meta name="author" content="Saymon Araujos">
+<link rel="canonical" href="https://saymonaraujo.me/tutorial/thedude_01/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.54f3f097e3adfb45cfcfe2baeca36117f520adac068afcfe70ee4cad7cb5c7cb.css" integrity="sha256-VPPwl&#43;Ot&#43;0XPz&#43;K67KNhF/UgrawGivz&#43;cO5MrXy1x8s=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://saymonaraujo.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://saymonaraujo.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://saymonaraujo.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://saymonaraujo.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://saymonaraujo.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
         }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "saymonaraujo" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="The Dude em RouterOS CHR" />
+<meta property="og:description" content="Instalando o The Dude em um RouterOS CHR em VMWare ESXi" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://saymonaraujo.me/tutorial/thedude_01/" /><meta property="og:image" content="https://saymonaraujo.me/papermod-cover.png"/><meta property="article:section" content="tutorial" />
+<meta property="article:published_time" content="2017-12-18T08:11:26-03:00" />
+<meta property="article:modified_time" content="2017-12-18T08:11:26-03:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://saymonaraujo.me/papermod-cover.png"/>
+
+<meta name="twitter:title" content="The Dude em RouterOS CHR"/>
+<meta name="twitter:description" content="Instalando o The Dude em um RouterOS CHR em VMWare ESXi"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Tutorials",
+      "item": "https://saymonaraujo.me/tutorial/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "The Dude em RouterOS CHR",
+      "item": "https://saymonaraujo.me/tutorial/thedude_01/"
+    }
+  ]
+}
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Dude em RouterOS CHR",
+  "name": "The Dude em RouterOS CHR",
+  "description": "Instalando o The Dude em um RouterOS CHR em VMWare ESXi",
+  "keywords": [
+    "thedude", "mikrotik"
+  ],
+  "articleBody": " Introdução   The Dude    The Dude,  é um NMS desenvolvido pela Mikrotik. Ele é muito utilizado por vários ISPs pela sua simplicidade e facilidade de configuração, até a sua versão 4.0, o server rodava em Windows, porém, a Mikrotik parou de desenvolver o software para Windows tornando possível a sua utilização (das ultimas versões) somente dentro da arquitetura do RouterOS.  No The Dude é possível a utilização de SNMP, assim, é possível a personalização do monitoramento. Os dispositivos Mikrotik são automaticamente monitorados, além disso, o software tem capacidades interessantes como Syslog e facilidade de acesso via Winbox e vários outros recursos como: analisador de spectro, scan de IP e topologia, criação de mapas, configuração de alertas, histórico de dados, entre outros recursos.  Problemas do The Dude   O The Dude, até a sua versão 4.0, tinha uma grande falha. O seu banco de dados tinha um tamanho máximo de 2G, quando os dados acumulados chegavam nesse tamanho o servidor entra em crash e depois disso os crashs ficam constantes. Para aqueles que ainda insistem em utilizar o The Dude em Windows e estão passando por esse problema recomendo que limpe a base de dados do servidor(em breve farei um tutorial de como fazer isso). Além disso, o The Dude é um software da Mikrotik, tornando impossível a adição de novas ferramentas se necessário.  RouterOS CHR    RouterOS, é o sistema operacional presente nas Router Board, que são os dispositivos da Mikrotik. Porém, agora a Mikrotik disponibiliza seu sistema operacional para ambiente virtualizados, esse sistema é chamado de CHR, abreviação de Cloud Housted Router.  É possível instalar o CHR diretamente na sua máquina utilizando o VMWare Workstation, ou, VMWare ESXi para ambientes mais robustos. Ainda é possível utilizar diretamente da nuvem com o AWS.  VMWare ESXi  É o software instalado diretamente em servidores que possibilita a criação de várias máquinas virtuais. Nesse tutorial não ensinaremos como instalar o VMWare no servidor.  Preparando a máquina   Preparando o VMDK   Primeiramente precisamos preparar o VMDK(Virtual Machine Disk), por padrão, o disco do CHR que a Mikrotik disponibiliza tem o tamanho de 95M, precisamos expandir esse disco para podermos gravar mais informações, caso contrário sua máquina irá parar quando alcançar o tamanho máximo do disco, exite também um tamanho máximo que é de 10G.  Nessa seção você tem 2 opções:  1 - Fazer o download do VMDK preparado  No servidor FTP a seguir você terá o arquivo .vmdk que poderá utilizar no seu VMWAre com a capacidade de 8G. Host: ftp.saymonaraujo.me Usuário: public Senha: fI17H%%H  2 - Preparar o VMDK manualmente   Para preparar o VMDK manualmente você irá precisar dos softwares:   VMWare Workstation Player   VMware vCenter Converter Standalone Client   VMWare vSphere Cliente    Primeiramente, fazer o download do vmdk no site da Mikrotik, clique aqui, na seção Cloud Hosted Router localize a linha do VMDK e faça o download da versão desejada.  Abrir o software VMWare Workstation Player, ir em: Player - File - New Virtual Machine. Selecionar a opção: I will install the operation system later. Selecionar: Other64 Escolher o nome da máquina virtual Escolher um tamanho de disco Clicar em Finish  Agora a máquina virtual foi criada, porém, agora temos que adicionar o VMDK que a Mikrotik disponibiliza e apagar o disco criado por padrão. Clicar com o botão direto na máquina virtual ir em:  Settings.   Clicar em  Hard Disk, e em remove embaixo. Clicar em add, selecionar: Hard Disk - IDE - Use and existing virtual disk - SELECIONAR O VMDK BAIXADO NO SITE DA MIKROTIK - Finish  Clicar em OK para aplicar as configurações, e abrir os settings novamente. Clicar no Hard Disk, e na parte direta clicar em expand digitar 8 e clicar em expand se pedir para converter clicar em OK e deixar converter. Para conferir o resultado é só clicar no botão de play para iniciar a máquina virtual. Segue o resultado:  É recomendado configurar outros recursos como memória e CPU.   Se for rodar o RouterOS nessa mesma máquina, prosseguir para  Ativando e Instalando The Dude, se for transferir a máquina para o seu servidor VMWare ESXi utilizar os softwares: VMware vCenter Converter Standalone Client e VMWare vSphere Cliente. O primeiro converte a transfere a máquina para o servidor desejado o segundo é para acessar o servidor e verificar/modificar as configurações da máquina virtual. Em outro tutorial ensinarei como instalar o VMWare ESXi em um servidor Dell e falaremos sobre essas ferramentas.  Ativando e Instalando The Dude   O cenário deve ser esse: Se for em sua máquina o RouterOS deve está instalado e rodando com o disco de 8G e você já deverá ter configurado memória e CPU. Se for em um servidor ESXi você deverá ter transferido a máquina e também configurado os recursos. Agora temos que ativar o CHR.   Ativando o RouterOS CHR   Você deve primeiramente obter uma licença do RouterOS CHR. O CHR têm licenças diferentes do RouterOS nas outras arquiteturas, totalizando 4 licenças.   free - Limite de velocidade de 1 Mega - Grátis   P1 - Limite de velocidade de 1 Giga - 45 Dólares   P10 - Limite de velocidade de 10 Gigas - 95 Dólares   P-Unlimited - Sem limite de velocidade - 250 Dólares   Como estamos utilizando esse CHR somente para o serviço do The Dude, a licença P1 satisfaz as nossas necessidades. Vá até o site da Mikrotik ( https://mikrotik.com/client/ ), cadastre-se e compre a licença P1. Abra o CHR instalado e digite o comando:  system licence renew   account: digitar_nome_usuario_mikrotik   password: digitar_senha_usuario_mikrotik   level: digitar_lvl_licença_chr  Se tudo estiver certo ao digitar o comando  system licence print  aparecerá o seguinte:  Instalando The Dude   O The Dude já vem instalado por padrão no CHR, se for utilizar IPv6 deve-se ativar o pacote de IPv6 (vem deastivado por padrão), tudo que temos que fazer para utilizar o dude é digitar o seguinte comando:  dude set enabled=yes  Pronto ! Você já tem um servidor do The Dude, agora utilize o The Dude Client para acessar o servidor, faça o download em: http://mikrotik.com/downloads  Finalizando  Espero que esse tutorial tenha ajudado, se tiver qualquer dúvida temos a seção de comentários abaixo ou entre em contato através do meu Twitter  e/ou email para:contato@saymonaraujo.me ",
+  "wordCount" : "1018",
+  "inLanguage": "en",
+  "datePublished": "2017-12-18T08:11:26-03:00",
+  "dateModified": "2017-12-18T08:11:26-03:00",
+  "author":{
+    "@type": "Person",
+    "name": "Saymon Araujos"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://saymonaraujo.me/tutorial/thedude_01/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "saymonaraujo.me",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://saymonaraujo.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
 
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://saymonaraujo.me" accesskey="h" title="saymonaraujo.me (Alt + H)">saymonaraujo.me</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://saymonaraujo.me/archives" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://saymonaraujo.me/search/" title="Buscar">
+                    <span>Buscar</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://saymonaraujo.me/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://saymonaraujo.me">Home</a>&nbsp;»&nbsp;<a href="https://saymonaraujo.me/tutorial/">Tutorials</a></div>
+    <h1 class="post-title">
+      The Dude em RouterOS CHR
+    </h1>
+    <div class="post-description">
+      Instalando o The Dude em um RouterOS CHR em VMWare ESXi
+    </div>
+    <div class="post-meta"><span title='2017-12-18 08:11:26 -0300 -03'>December 18, 2017</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Saymon Araujos
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#" aria-label=" Introdução "> Introdução </a><ul>
+                        
+                <li>
+                    <a href="#" aria-label=" The Dude "> The Dude </a><ul>
+                        
+                <li>
+                    <a href="#" aria-label=" Problemas do The Dude "> Problemas do The Dude </a></li></ul>
+                </li>
+                <li>
+                    <a href="#" aria-label=" RouterOS CHR "> RouterOS CHR </a></li>
+                <li>
+                    <a href="#" aria-label=" VMWare ESXi "> VMWare ESXi </a></li></ul>
+                </li>
+                <li>
+                    <a href="#" aria-label=" Preparando a máquina "> Preparando a máquina </a><ul>
+                        
+                <li>
+                    <a href="#" aria-label=" Preparando o VMDK "> Preparando o VMDK </a><ul>
+                        
+                <li>
+                    <a href="#" aria-label=" 1 - Fazer o download do VMDK preparado "> 1 - Fazer o download do VMDK preparado </a></li>
+                <li>
+                    <a href="#" aria-label=" 2 - Preparar o VMDK manualmente "> 2 - Preparar o VMDK manualmente </a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#" aria-label=" Ativando e Instalando The Dude "> Ativando e Instalando The Dude </a><ul>
+                        
+                <li>
+                    <a href="#" aria-label=" Ativando o RouterOS CHR "> Ativando o RouterOS CHR </a></li>
+                <li>
+                    <a href="#" aria-label=" Instalando The Dude "> Instalando The Dude </a></li></ul>
+                </li>
+                <li>
+                    <a href="#" aria-label=" Finalizando "> Finalizando </a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2> Introdução </h2>
+<h3> The Dude </h3>
+<p>
+<strong> The Dude, </strong> é um NMS desenvolvido pela Mikrotik. Ele é muito utilizado por vários ISPs pela sua simplicidade e facilidade de configuração, até a sua versão 4.0, o server rodava em Windows, porém, a Mikrotik parou de desenvolver o software para Windows tornando possível a sua utilização (das ultimas versões) somente dentro da arquitetura do RouterOS.
+</p>
+<p>
+No The Dude é possível a utilização de SNMP, assim, é possível a personalização do monitoramento. Os dispositivos Mikrotik são automaticamente monitorados, além disso, o software tem capacidades interessantes como Syslog e facilidade de acesso via Winbox e vários outros recursos como: analisador de spectro, scan de IP e topologia, criação de mapas, configuração de alertas, histórico de dados, entre outros recursos.
+<img src="/img/thedude_01_01.png">
+</p>
+<h4> Problemas do The Dude </h4>
+<p>
+O The Dude, até a sua versão 4.0, tinha uma grande falha. O seu banco de dados tinha um tamanho máximo de 2G, quando os dados acumulados chegavam nesse tamanho o servidor entra em crash e depois disso os crashs ficam constantes. Para aqueles que ainda insistem em utilizar o The Dude em Windows e estão passando por esse problema recomendo que limpe a base de dados do servidor(em breve farei um tutorial de como fazer isso). Além disso, o The Dude é um software da Mikrotik, tornando impossível a adição de novas ferramentas se necessário.
+</p>
+<h3> RouterOS CHR </h3>
+<p>
+<strong> RouterOS</strong>, é o sistema operacional presente nas Router Board, que são os dispositivos da Mikrotik. Porém, agora a Mikrotik disponibiliza seu sistema operacional para ambiente virtualizados, esse sistema é chamado de CHR, abreviação de Cloud Housted Router.
+</p>
+<p>
+É possível instalar o CHR diretamente na sua máquina utilizando o VMWare Workstation, ou, VMWare ESXi para ambientes mais robustos. Ainda é possível utilizar diretamente da nuvem com o AWS.
+</p>
+<h3> VMWare ESXi </h3>
+É o software instalado diretamente em servidores que possibilita a criação de várias máquinas virtuais. Nesse tutorial não ensinaremos como instalar o VMWare no servidor.
+<h2> Preparando a máquina </h2>
+<h3> Preparando o VMDK </h3>
+<p>
+Primeiramente precisamos preparar o VMDK(Virtual Machine Disk), por padrão, o disco do CHR que a Mikrotik disponibiliza tem o tamanho de 95M, precisamos expandir esse disco para podermos gravar mais informações, caso contrário sua máquina irá parar quando alcançar o tamanho máximo do disco, exite também um tamanho máximo que é de 10G.
+</p>
+<p>
+Nessa seção você tem 2 opções:
+</p>
+<h4> 1 - Fazer o download do VMDK preparado </h4>
+No servidor FTP a seguir você terá o arquivo .vmdk que poderá utilizar no seu VMWAre com a capacidade de 8G.
+<br>
+Host: ftp.saymonaraujo.me
+<br>
+Usuário: public
+<br>
+Senha: fI17H%%H
+<h4> 2 - Preparar o VMDK manualmente </h4>
+<p>
+Para preparar o VMDK manualmente você irá precisar dos softwares:
+<br>
+<ol>
+<li> VMWare Workstation Player </li>
+<li> VMware vCenter Converter Standalone Client </li>
+<li> VMWare vSphere Cliente </li>
+</ol>
+</p>
+<p>
+Primeiramente, fazer o download do vmdk no site da Mikrotik, <a href="http://www.mikrotik.com/downloads" > clique aqui</a>, na seção Cloud Hosted Router localize a linha do VMDK e faça o download da versão desejada.
+</p>
+<p>
+Abrir o software <strong>VMWare Workstation Player</strong>, ir em: Player -> File -> New Virtual Machine.
+<br>
+Selecionar a opção: I will install the operation system later.
+<br>
+<img src="/img/thedude_01_02.png">
+<br>
+Selecionar: Other64
+<br>
+<img src="/img/thedude_01_03.png">
+<br>
+Escolher o nome da máquina virtual
+<br>
+<img src="/img/thedude_01_04.png">
+<br>
+Escolher um tamanho de disco
+<br>
+<img src="/img/thedude_01_05.png">
+<br>
+Clicar em Finish
+<br>
+<img src="/img/thedude_01_06.png">
+</p>
+<p>
+Agora a máquina virtual foi criada, porém, agora temos que adicionar o VMDK que a Mikrotik disponibiliza e apagar o disco criado por padrão. Clicar com o botão direto na máquina virtual ir em: <strong> Settings. </strong>
+</p>
+<p>
+Clicar em <strong> Hard Disk</strong>, e em remove embaixo. <br>
+Clicar em add, selecionar: <strong>Hard Disk -> IDE -> Use and existing virtual disk -> SELECIONAR O VMDK BAIXADO NO SITE DA MIKROTIK -> Finish </strong>
+<br>
+Clicar em OK para aplicar as configurações, e abrir os settings novamente.
+<br>
+Clicar no Hard Disk, e na parte direta clicar em <strong>expand</strong> digitar 8 e clicar em <strong>expand</strong> se pedir para converter clicar em OK e deixar converter.
+<br>
+<img src="/img/thedude_01_07.png">
+Para conferir o resultado é só clicar no botão de play para iniciar a máquina virtual. Segue o resultado:
+<br>
+<img src="/img/thedude_01_08.png">
+<br>
+<strong> É recomendado configurar outros recursos como memória e CPU. </strong>
+</p>
+<p>
+Se for rodar o RouterOS nessa mesma máquina, prosseguir para <strong> Ativando e Instalando The Dude</strong>, se for transferir a máquina para o seu servidor VMWare ESXi utilizar os softwares: VMware vCenter Converter Standalone Client e VMWare vSphere Cliente. O primeiro converte a transfere a máquina para o servidor desejado o segundo é para acessar o servidor e verificar/modificar as configurações da máquina virtual. Em outro tutorial ensinarei como instalar o VMWare ESXi em um servidor Dell e falaremos sobre essas ferramentas.
+<h2> Ativando e Instalando The Dude </h2>
+<p>
+O cenário deve ser esse: Se for em sua máquina o RouterOS deve está instalado e rodando com o disco de 8G e você já deverá ter configurado memória e CPU. Se for em um servidor ESXi você deverá ter transferido a máquina e também configurado os recursos. Agora temos que ativar o CHR.
+<p>
+<h3> Ativando o RouterOS CHR </h3>
+<p>
+Você deve primeiramente obter uma licença do RouterOS CHR. O CHR têm licenças diferentes do RouterOS nas outras arquiteturas, totalizando 4 licenças.
+<ul>
+<li> free - Limite de velocidade de 1 Mega - Grátis </li>
+<li> P1 - Limite de velocidade de 1 Giga - 45 Dólares </li>
+<li> P10 - Limite de velocidade de 10 Gigas - 95 Dólares </li>
+<li> P-Unlimited - Sem limite de velocidade - 250 Dólares </li>
+</ul>
+Como estamos utilizando esse CHR somente para o serviço do The Dude, a licença P1 satisfaz as nossas necessidades.
+<br>
+Vá até o site da Mikrotik ( https://mikrotik.com/client/ ), cadastre-se e compre a licença P1.
+<br>
+Abra o CHR instalado e digite o comando:
+<br>
+<code> system licence renew </code>
+<br>
+<code> account: digitar_nome_usuario_mikrotik </code>
+<br>
+<code> password: digitar_senha_usuario_mikrotik </code>
+<br>
+<code> level: digitar_lvl_licença_chr </code>
+<br>
+Se tudo estiver certo ao digitar o comando <code> system licence print </code> aparecerá o seguinte:
+<br>
+<img src="/img/thedude_01_09.png">
+</p>
+<h3> Instalando The Dude </h3>
+<p>
+O The Dude já vem instalado por padrão no CHR, se for utilizar IPv6 deve-se ativar o pacote de IPv6 (vem deastivado por padrão), tudo que temos que fazer para utilizar o dude é digitar o seguinte comando:
+<br>
+<code>
+dude set enabled=yes
+</code>
+<br>
+<strong>Pronto</strong> ! Você já tem um servidor do The Dude, agora utilize o The Dude Client para acessar o servidor, faça o download em: http://mikrotik.com/downloads
+<br>
+<h2> Finalizando </h2>
+Espero que esse tutorial tenha ajudado, se tiver qualquer dúvida temos a seção de comentários abaixo ou entre em contato através do meu <a href="http://twitter.com/saymonaraujome"> Twitter </a> e/ou email para:contato@saymonaraujo.me
+</p>
+
   </div>
-  
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-109691770-1', 'auto');
-    ga('send', 'pageview');
-    window.baseURL = "https:\/\/saymonaraujo.me\/";
-  </script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-  
-  <script src="https://saymonaraujo.me//js/App.js"></script>
-  
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://saymonaraujo.me/tags/thedude/">thedude</a></li>
+      <li><a href="https://saymonaraujo.me/tags/mikrotik/">mikrotik</a></li>
+    </ul>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share The Dude em RouterOS CHR on twitter"
+        href="https://twitter.com/intent/tweet/?text=The%20Dude%20em%20RouterOS%20CHR&amp;url=https%3a%2f%2fsaymonaraujo.me%2ftutorial%2fthedude_01%2f&amp;hashtags=thedude%2cmikrotik">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share The Dude em RouterOS CHR on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fsaymonaraujo.me%2ftutorial%2fthedude_01%2f&amp;title=The%20Dude%20em%20RouterOS%20CHR&amp;summary=The%20Dude%20em%20RouterOS%20CHR&amp;source=https%3a%2f%2fsaymonaraujo.me%2ftutorial%2fthedude_01%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share The Dude em RouterOS CHR on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fsaymonaraujo.me%2ftutorial%2fthedude_01%2f&title=The%20Dude%20em%20RouterOS%20CHR">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share The Dude em RouterOS CHR on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsaymonaraujo.me%2ftutorial%2fthedude_01%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share The Dude em RouterOS CHR on whatsapp"
+        href="https://api.whatsapp.com/send?text=The%20Dude%20em%20RouterOS%20CHR%20-%20https%3a%2f%2fsaymonaraujo.me%2ftutorial%2fthedude_01%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share The Dude em RouterOS CHR on telegram"
+        href="https://telegram.me/share/url?text=The%20Dude%20em%20RouterOS%20CHR&amp;url=https%3a%2f%2fsaymonaraujo.me%2ftutorial%2fthedude_01%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://saymonaraujo.me">saymonaraujo.me</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
 </body>
+
 </html>

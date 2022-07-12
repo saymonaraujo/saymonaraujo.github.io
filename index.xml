@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>saymonaraujo.me</title>
     <link>https://saymonaraujo.me/</link>
     <description>Recent content on saymonaraujo.me</description>
+    <image>
+      <url>https://saymonaraujo.me/papermod-cover.png</url>
+      <link>https://saymonaraujo.me/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
     <lastBuildDate>Mon, 18 Dec 2017 08:11:26 -0300</lastBuildDate><atom:link href="https://saymonaraujo.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Dude em RouterOS CHR</title>
@@ -13,7 +16,7 @@
       <pubDate>Mon, 18 Dec 2017 08:11:26 -0300</pubDate>
       
       <guid>https://saymonaraujo.me/tutorial/thedude_01/</guid>
-      <description></description>
+      <description>Instalando o The Dude em um RouterOS CHR em VMWare ESXi</description>
     </item>
     
     <item>
@@ -22,7 +25,7 @@
       <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
       
       <guid>https://saymonaraujo.me/post/graylog_01/</guid>
-      <description></description>
+      <description>Graylog - Entendendo a necessidade em um ambiente de redes</description>
     </item>
     
     <item>
@@ -31,7 +34,7 @@
       <pubDate>Sat, 16 Dec 2017 09:51:51 -0400</pubDate>
       
       <guid>https://saymonaraujo.me/post/azure_01/</guid>
-      <description></description>
+      <description>Microsoft azure para estudantes</description>
     </item>
     
     <item>
@@ -40,8 +43,10 @@
       <pubDate>Thu, 16 Nov 2017 08:03:10 -0300</pubDate>
       
       <guid>https://saymonaraujo.me/about/</guid>
-      <description></description>
+      <description>Tem experiência em linguagens de programação como: PHP, HTML, Javascript e com SGDB principalmente MySQL.Desenvolveu o sistema de certificados para a Loading Desenvolvimento Jr.  como parte do estágio da universidade. Estudando para tirar a certificação CCNA. Tem Experiencia com Rádios Digitais  e protocolos de roteamento como OSPF/OSPFv3 e BGP. Tem experiência também com sistemas de monitoramento e snmp com os softwares: NetXMS, The Dude, PRTG, Zabbix. Tem experiência com as seguintes fabricantes:</description>
     </item>
+    
+    
     
   </channel>
 </rss>
